@@ -1,0 +1,133 @@
+/* ---- Full-page gradient background ---- */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #f0fdf4, #dbeafe, #f0faff);
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ---- Profile container with blob background ---- */
+.profile-container {
+  max-width: 500px;
+  margin: 60px auto;
+  padding: 30px;
+  border-radius: 16px;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Decorative radial blobs */
+.profile-container::before {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle at center, #bae6fd, transparent);
+  border-radius: 50%;
+  top: -100px;
+  left: -100px;
+  z-index: 0;
+}
+
+.profile-container::after {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle at center, #d9f99d, transparent);
+  border-radius: 50%;
+  bottom: -80px;
+  right: -80px;
+  z-index: 0;
+}
+
+/* ---- Avatar ---- */
+.profile-container img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #06b6d4;
+  margin-bottom: 20px;
+  z-index: 1;
+  position: relative;
+}
+
+/* ---- Heading ---- */
+.profile-container h2 {
+  margin-bottom: 25px;
+  color: #0f172a;
+  z-index: 1;
+  position: relative;
+}
+
+/* ---- Input Form ---- */
+.profile-form input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 15px;
+  z-index: 1;
+  position: relative;
+}
+
+/* ---- Save Profile / Update Profile Buttons ---- */
+.profile-form button,
+.profile-display button {
+  background: linear-gradient(to right, #06b6d4, #3b82f6);
+  color: white;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  z-index: 1;
+  position: relative;
+}
+
+.profile-form button:hover,
+.profile-display button:hover {
+  background: linear-gradient(to right, #0891b2, #2563eb);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ---- Profile Text Display ---- */
+.profile-display p {
+  font-size: 16px;
+  color: #334155;
+  margin: 12px 0;
+  text-align: left;
+  padding-left: 10px;
+  z-index: 1;
+  position: relative;
+}
+
+/* ---- Back Button ---- */
+.back-button {
+  margin-top: 30px;
+  background-color: #06b6d4;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  z-index: 1;
+  position: relative;
+}
+
+.back-button:hover {
+  background-color: #0891b2;
+}

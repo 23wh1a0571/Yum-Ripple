@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f7f9f9;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.view-wrapper {
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(to bottom right, #f0fdfa, #e0f7fa);
+}
+
+.search-section {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0e7490;
+}
+
+.subtitle {
+  margin: 0.5rem 0 1rem;
+  color: #555;
+}
+
+.input {
+  padding: 10px 15px;
+  border-radius: 25px;
+  border: 2px solid #75c9b7;
+  width: 260px;
+  font-size: 16px;
+  background-color: white;
+}
+
+.button {
+  padding: 10px 25px;
+  margin-left: 10px;
+  background-color: #3aafa9;
+  color: white;
+  border: none;
+  font-weight: bold;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.button:hover {
+  background-color: #2b7a78;
+  transform: scale(1.05);
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+.recipe-card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(58, 175, 169, 0.15);
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgba(58, 175, 169, 0.3);
+}
+
+.recipe-card.expanded {
+  max-width: 500px;
+  margin: auto;
+}
+
+.recipe-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.recipe-card h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0e7490;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.recipe-card p {
+  font-size: 0.95rem;
+  color: #444;
+  margin: 10px 0 0 0;
+}
+
+.recipe-card .max-h-32 {
+  max-height: 8rem;
+  overflow-y: auto;
+}
+
+iframe.video {
+  border-radius: 10px;
+  margin-top: 15px;
+  width: 100%;
+  height: 300px;
+}
+
+.card-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.icon-btn:hover {
+  transform: scale(1.2);
+}
+
+.delete-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.text-red-500 {
+  color: #e11d48;
+}
+
+.text-gray-400 {
+  color: #999;
+}
+
+/* ✅ Back Button Styles */
+.back-button {
+  background-color: #d1d5db;
+  color: #111827;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  margin-bottom: 16px;
+  margin-top: -8px;
+  cursor: pointer;
+  display: inline-block;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+  background-color: #9ca3af;
+  transform: scale(1.05);
+}

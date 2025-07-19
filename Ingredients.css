@@ -1,0 +1,210 @@
+.market-wrapper {
+  font-family: Arial, sans-serif;
+  max-width: 1200px;
+  margin: 20px auto;
+  background: #e9f5ec;
+  color: #2a4d14;
+  padding: 30px 20px;
+  border-radius: 15px;
+}
+
+.market-wrapper h1 {
+  text-align: center;
+  color: #0b3d0b;
+  text-shadow: 1px 1px 2px #c8e6c9;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.search-bar {
+  display: block;
+  margin: 0 auto 25px;
+  padding: 12px 20px;
+  width: 300px;
+  border-radius: 25px;
+  border: 2px solid #4caf50;
+  outline: none;
+  font-size: 16px;
+  box-shadow: inset 0 0 5px #a3d2a1;
+}
+
+#itemsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 10px;
+}
+
+/* Grid Card */
+.item-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+  padding: 15px 20px;
+  width: 180px;
+  text-align: center;
+  transition: transform 0.25s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.item-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 100, 0, 0.1);
+}
+
+.item-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.item-name {
+  font-weight: 700;
+  font-size: 18px;
+  color: #2a4d14;
+  margin-bottom: 8px;
+}
+
+/* Expanded View */
+.item-card.expanded {
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  animation: fadeSlideIn 0.3s ease-in-out;
+  position: relative;
+  text-align: center;
+}
+
+/* Expanded image */
+.item-card.expanded img {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  margin: 0 auto 12px;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 20px;
+  background: transparent;
+  border: none;
+  color: #c62828;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+
+.close-btn:hover {
+  transform: scale(1.2);
+}
+
+/* Nutrition & Recipe box */
+.ingredient-modal {
+  margin-top: 10px;
+  background: #f5fef7;
+  border-top: 1px solid #c0d9b8;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: left;
+  animation: fadeSlideIn 0.3s ease-in-out;
+  font-size: 0.9rem;
+  color: #1b3a07;
+}
+
+.ingredient-modal p {
+  margin: 6px 0;
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+.ingredient-modal ul {
+  padding-left: 18px;
+  margin: 0 0 8px;
+  list-style: disc;
+  color: #2a4d14;
+}
+
+/* For spacing between sections in modal */
+.mt {
+  margin-top: 12px;
+}
+
+.loading {
+  font-style: italic;
+  color: #388e3c;
+  margin-top: 20px;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .search-bar {
+    width: 90%;
+  }
+
+  .item-card.expanded {
+    max-width: 90%;
+  }
+}
+
+.back-button {
+  background-color: #e5e7eb;
+  color: #111827;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  margin-bottom: 16px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+  background-color: #d1d5db;
+  transform: scale(1.05);
+}
+.popular-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  padding: 10px;
+  width: 100%;
+  justify-items: center;
+}
+
+@media (max-width: 1000px) {
+  .popular-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .popular-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .popular-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

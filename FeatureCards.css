@@ -1,0 +1,45 @@
+/* src/components/FeatureCards.css */
+
+.features-section {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 1rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.feature-card {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 200, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 180px;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 30px rgba(0, 200, 255, 0.2);
+}
+
+.feature-card h3 {
+  color: #0891b2;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.feature-card p {
+  color: #334155;
+  font-size: 1rem;
+  line-height: 1.5;
+}

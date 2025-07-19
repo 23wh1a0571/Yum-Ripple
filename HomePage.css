@@ -1,0 +1,141 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom right, #f0faff, #e0f7fa, #e6f2ff);
+  color: #0f172a;
+  min-height: 100vh;
+}
+
+/* ---------- Header ---------- */
+header {
+  background: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.inner-header {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0891b2;
+}
+
+nav a {
+  margin-left: 24px;
+  text-decoration: none;
+  color: #334155;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+nav a:hover {
+  color: #0891b2;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  width: 100vw;
+  height: 400px;
+  overflow: hidden;
+}
+
+.hero-slider {
+  display: flex;
+  min-width: 200%;
+  height: 100%;
+  animation: scroll 15s linear infinite;
+}
+
+.hero-slider img {
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #0e7490;
+  margin-bottom: 1rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.hero-subtext {
+  font-size: 1.25rem;
+  color: rgba(14, 116, 144, 0.8);
+  max-width: 32rem;
+}
+
+/* ---------- Features ---------- */
+.features {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+}
+
+.feature-card {
+  background: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 200, 255, 0.15);
+  border-radius: 1rem;
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+}
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 25px rgba(0, 200, 255, 0.4);
+}
+.feature-card h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0891b2;
+  margin-bottom: 0.75rem;
+}
+.feature-card p {
+  color: #475569;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background: #ffffff;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+  padding: 1.5rem 0;
+  text-align: center;
+  color: #64748b;
+  font-size: 0.875rem;
+  user-select: none;
+}
+
+/* ---------- Animation ---------- */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}

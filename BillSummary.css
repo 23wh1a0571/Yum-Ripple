@@ -1,0 +1,84 @@
+.bill-wrapper {
+  font-family: Arial, sans-serif;
+  background-color: #f0f9f0;
+  padding: 20px;
+  color: #2a4d14;
+}
+
+.bill-wrapper h1,
+.bill-wrapper h2 {
+  text-align: center;
+  color: #1b3a07;
+  text-shadow: 1px 1px 2px #c8e6c9;
+}
+
+.bill-box {
+  max-width: 800px;
+  margin: auto;
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 5px 12px rgba(46, 125, 50, 0.2);
+}
+
+.bill-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 25px;
+}
+
+.bill-table th,
+.bill-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #c0d9b8;
+}
+
+.bill-table th {
+  background-color: #e9f5ec;
+}
+
+.text-center {
+  text-align: center;
+  font-weight: 600;
+}
+
+.total-amount {
+  text-align: right;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #2e7d32;
+}
+
+.payment-section {
+  margin-top: 40px;
+}
+
+.payment-section input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  border: 2px solid #4caf50;
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+}
+
+#payBtn {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+#payBtn:hover {
+  background-color: #388e3c;
+}

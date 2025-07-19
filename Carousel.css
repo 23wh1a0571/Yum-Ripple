@@ -1,0 +1,57 @@
+/* src/components/Carousel.css */
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Overlay text above the images */
+.carousel-overlay {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 10;
+}
+.carousel-title {
+  font-size: 2.5rem;
+  font-weight: 800; /* Already bold */
+  color: #0e7490;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  margin-bottom: 0.5rem;
+}
+
+.carousel-subtext {
+  font-size: 1.2rem;
+  font-weight: 600; /* Add boldness to subtext */
+  color: rgba(14, 116, 144, 0.8);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+/* Image Scroller */
+.carousel-track {
+  display: flex;
+  animation: scroll 15s linear infinite;
+  width: calc(100vw * 14); /* 7 images × 2 = 14 to loop smoothly */
+}
+
+.carousel-image {
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
